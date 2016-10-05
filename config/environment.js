@@ -6,6 +6,23 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: "AIzaSyCDsdkUXLBxGAMGmNmTxIK1Vl8ANfGujz4",
+      authDomain: "ember-secom-app.firebaseapp.com",
+      databaseURL: "https://ember-secom-app.firebaseio.com",
+      storageBucket: "ember-secom-app.appspot.com",
+      messagingSenderId: "605443485040"  
+    },
+    torii: {  
+      sessionServiceName: 'session',
+      providers: {
+        'google-oauth2': {
+          apiKey:"605443485040-vlsktsl59tsla3latdgfb1q1jqm093sk.apps.googleusercontent.com",
+          redirectUri: "https://ember-secom-app.firebaseapp.com/__/auth/handler"
+          // redirectUri: "https://auth.firebase.com/v2/ember-secom-app/auth/google/callback",
+        }
+      }
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -17,6 +34,11 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     }
+    // ,
+    // firebase: 'https://ember-secom-app.firebaseio.com/',  
+    // torii: {  
+    //   sessionServiceName: 'session'
+    // }
   };
 
   if (environment === 'development') {
